@@ -7,10 +7,10 @@ class Timer
 
 	def time_string
 		hr = (@seconds/3600)%60
-		remainder = (@seconds/60)%60
+		minutes = (@seconds/60)%60
 		@seconds = @seconds%60
 
-		@time_string = "%02d:%02d:%02d" % [hr, remainder, @seconds]
+		return "%02d:%02d:%02d" % [hr, minutes, @seconds]
 	end
 
 end
